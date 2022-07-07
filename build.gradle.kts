@@ -3,10 +3,6 @@ plugins {
     kotlin("plugin.serialization")// version "1.7.0"
 }
 
-repositories {
-    mavenCentral()
-}
-
 kotlin {
     jvm()
 
