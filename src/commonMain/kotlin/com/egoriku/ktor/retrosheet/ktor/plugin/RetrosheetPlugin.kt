@@ -1,9 +1,9 @@
-package com.egoriku.retrosheetkmm.ktor.plugin
+package com.egoriku.ktor.retrosheet.ktor.plugin
 
-import com.egoriku.retrosheetkmm.ktor.iGoogleSheetUrl
-import com.egoriku.retrosheetkmm.ktor.replace
-import com.egoriku.retrosheetkmm.parseCsv
-import com.egoriku.retrosheetkmm.util.QueryConverter
+import com.egoriku.ktor.retrosheet.ktor.iGoogleSheetUrl
+import com.egoriku.ktor.retrosheet.ktor.replace
+import com.egoriku.ktor.retrosheet.parseCsv
+import com.egoriku.ktor.retrosheet.util.QueryConverter
 import io.ktor.client.*
 import io.ktor.client.plugins.*
 import io.ktor.client.request.*

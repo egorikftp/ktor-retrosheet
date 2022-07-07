@@ -1,4 +1,4 @@
-package com.egoriku.retrosheetkmm.util
+package com.egoriku.ktor.retrosheet.util
 
 class QueryConverter(
     private val smartQuery: String,

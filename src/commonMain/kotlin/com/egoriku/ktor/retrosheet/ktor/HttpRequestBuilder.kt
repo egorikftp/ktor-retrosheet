@@ -1,4 +1,4 @@
-package com.egoriku.retrosheetkmm.ktor
+package com.egoriku.ktor.retrosheet.ktor
 
 import io.ktor.client.request.*
 import io.ktor.http.*

@@ -1,4 +1,4 @@
-package com.egoriku.retrosheetkmm.serializer
+package com.egoriku.ktor.retrosheet.serializer
 
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.PrimitiveKind

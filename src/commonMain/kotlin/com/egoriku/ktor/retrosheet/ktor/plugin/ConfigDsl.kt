@@ -1,7 +1,7 @@
-package com.egoriku.retrosheetkmm.ktor.plugin
+package com.egoriku.ktor.retrosheet.ktor.plugin
 
-import com.egoriku.retrosheetkmm.util.ColumnNameVerifier
-import com.egoriku.retrosheetkmm.util.SheetUtils
+import com.egoriku.ktor.retrosheet.util.ColumnNameVerifier
+import com.egoriku.ktor.retrosheet.util.SheetUtils
 
 @DslMarker
 annotation class ConfigDsl

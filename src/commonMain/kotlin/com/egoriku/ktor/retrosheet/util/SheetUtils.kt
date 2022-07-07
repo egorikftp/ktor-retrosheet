@@ -1,4 +1,4 @@
-package com.egoriku.retrosheetkmm.util
+package com.egoriku.ktor.retrosheet.util
 
 object SheetUtils {
 
