@@ -27,7 +27,7 @@ class RetrosheetPlugin(private val sheets: Map<String, Map<String, String>>) {
             hasHeaderRecord = true
         }
 
-        override val key: AttributeKey<RetrosheetPlugin> = AttributeKey("retrosheet-kmm")
+        override val key: AttributeKey<RetrosheetPlugin> = AttributeKey("ktor-retrosheet")
 
         override fun prepare(block: Config.() -> Unit): RetrosheetPlugin {
             val config = Config().apply(block)
