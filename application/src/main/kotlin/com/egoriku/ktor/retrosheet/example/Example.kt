@@ -3,6 +3,7 @@ package com.egoriku.ktor.retrosheet.example
 import com.egoriku.ktor.retrosheet.example.model.Config
 import com.egoriku.ktor.retrosheet.example.model.Features
 import com.egoriku.ktor.retrosheet.extension.defaultSheetUrl
+import com.egoriku.ktor.retrosheet.extension.query
 import com.egoriku.ktor.retrosheet.extension.sheet
 import com.egoriku.ktor.retrosheet.plugin.RetrosheetPlugin
 import com.egoriku.ktor.retrosheet.plugin.configuration
@@ -24,12 +25,11 @@ fun main() {
             install(ContentNegotiation) {
                 json()
             }
-
             defaultRequest {
                 defaultSheetUrl(docId = "1XrYNW2hX4lMxMhd8rOFzk5vrjYlxg3WxEKPAqDMhB54")
             }
             install(RetrosheetPlugin) {
-                configuration {
+                configuration = configuration {
                     sheet {
                         name = CATEGORIES
                         columns = listOf(
@@ -58,12 +58,22 @@ fun main() {
             sheet(CATEGORIES)
         }.body<List<Config>>().also {
             println(it.joinToString(separator = "\n"))
+            println("__________")
+        }
+
+        httpClient.get {
+            sheet(CATEGORIES)
+            query("WHERE category_id = 1")
+        }.body<List<Config>>().also {
+            println(it.joinToString(separator = "\n"))
+            println("__________")
         }
 
         httpClient.get {
             sheet(FEATURES)
         }.body<List<Features>>().also {
             println(it.joinToString(separator = "\n"))
+            println("__________")
         }
     }
 }

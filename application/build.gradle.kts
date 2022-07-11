@@ -3,10 +3,15 @@ plugins {
     kotlin("plugin.serialization")
 }
 
+repositories {
+    mavenLocal()
+}
+
 val implementation by configurations
 
 dependencies {
     implementation(projects.ktorRetrosheet)
+    // implementation("com.egoriku.ktor.retrosheet:ktor-retrosheet:1.0.0")
 
     implementation("io.ktor:ktor-client-core:2.0.3")
     implementation("io.ktor:ktor-client-cio:2.0.3")
