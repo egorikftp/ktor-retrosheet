@@ -7,7 +7,7 @@ kotlin {
     jvm()
 
     sourceSets {
-        val commonMain by getting {
+        commonMain {
             dependencies {
                 implementation(projects.kotlinxSerializationCsv)
 
@@ -19,6 +19,5 @@ kotlin {
                 implementation("io.ktor:ktor-serialization-kotlinx-json:2.0.3")
             }
         }
-
     }
 }
