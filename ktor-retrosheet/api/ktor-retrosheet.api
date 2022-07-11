@@ -1,0 +1,95 @@
+public final class com/egoriku/ktor/retrosheet/extension/HttpRequestBuilderKt {
+	public static final fun defaultSheetUrl (Lio/ktor/client/plugins/DefaultRequest$DefaultRequestBuilder;Ljava/lang/String;)V
+	public static final fun query (Lio/ktor/client/request/HttpRequestBuilder;Ljava/lang/Object;)V
+	public static final fun sheet (Lio/ktor/client/request/HttpRequestBuilder;Ljava/lang/Object;)V
+}
+
+public final class com/egoriku/ktor/retrosheet/plugin/ConfigBuilder {
+	public fun <init> ()V
+	public final fun build ()Lcom/egoriku/ktor/retrosheet/plugin/Configuration;
+	public final fun sheet (Lkotlin/jvm/functions/Function1;)V
+	public static synthetic fun sheet$default (Lcom/egoriku/ktor/retrosheet/plugin/ConfigBuilder;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
+}
+
+public abstract interface annotation class com/egoriku/ktor/retrosheet/plugin/ConfigDsl : java/lang/annotation/Annotation {
+}
+
+public final class com/egoriku/ktor/retrosheet/plugin/ConfigDslKt {
+	public static final fun configuration (Lkotlin/jvm/functions/Function1;)Lcom/egoriku/ktor/retrosheet/plugin/Configuration;
+}
+
+public final class com/egoriku/ktor/retrosheet/plugin/Configuration {
+	public fun <init> (Ljava/util/Map;)V
+	public final fun component1 ()Ljava/util/Map;
+	public final fun copy (Ljava/util/Map;)Lcom/egoriku/ktor/retrosheet/plugin/Configuration;
+	public static synthetic fun copy$default (Lcom/egoriku/ktor/retrosheet/plugin/Configuration;Ljava/util/Map;ILjava/lang/Object;)Lcom/egoriku/ktor/retrosheet/plugin/Configuration;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getSheets ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/egoriku/ktor/retrosheet/plugin/RetrosheetPlugin {
+	public static final field Feature Lcom/egoriku/ktor/retrosheet/plugin/RetrosheetPlugin$Feature;
+	public fun <init> (Ljava/util/Map;)V
+}
+
+public final class com/egoriku/ktor/retrosheet/plugin/RetrosheetPlugin$Config {
+	public fun <init> ()V
+	public final fun getConfiguration ()Lcom/egoriku/ktor/retrosheet/plugin/Configuration;
+	public final fun setConfiguration (Lcom/egoriku/ktor/retrosheet/plugin/Configuration;)V
+}
+
+public final class com/egoriku/ktor/retrosheet/plugin/RetrosheetPlugin$Feature : io/ktor/client/plugins/HttpClientPlugin {
+	public fun getKey ()Lio/ktor/util/AttributeKey;
+	public fun install (Lcom/egoriku/ktor/retrosheet/plugin/RetrosheetPlugin;Lio/ktor/client/HttpClient;)V
+	public synthetic fun install (Ljava/lang/Object;Lio/ktor/client/HttpClient;)V
+	public fun prepare (Lkotlin/jvm/functions/Function1;)Lcom/egoriku/ktor/retrosheet/plugin/RetrosheetPlugin;
+	public synthetic fun prepare (Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
+}
+
+public final class com/egoriku/ktor/retrosheet/plugin/Sheet {
+	public fun <init> (Ljava/lang/String;Ljava/util/Map;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/Map;
+	public final fun copy (Ljava/lang/String;Ljava/util/Map;)Lcom/egoriku/ktor/retrosheet/plugin/Sheet;
+	public static synthetic fun copy$default (Lcom/egoriku/ktor/retrosheet/plugin/Sheet;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Lcom/egoriku/ktor/retrosheet/plugin/Sheet;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getColumns ()Ljava/util/Map;
+	public final fun getSheetName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/egoriku/ktor/retrosheet/plugin/SheetBuilder {
+	public fun <init> ()V
+	public final fun build ()Lcom/egoriku/ktor/retrosheet/plugin/Sheet;
+	public final fun getColumns ()Ljava/util/List;
+	public final fun getName ()Ljava/lang/String;
+	public final fun setColumns (Ljava/util/List;)V
+	public final fun setName (Ljava/lang/String;)V
+}
+
+public final class com/egoriku/ktor/retrosheet/util/ColumnNameVerifier {
+	public static final field Companion Lcom/egoriku/ktor/retrosheet/util/ColumnNameVerifier$Companion;
+	public fun <init> (Ljava/util/Set;)V
+	public final fun verify ()Z
+}
+
+public final class com/egoriku/ktor/retrosheet/util/ColumnNameVerifier$Companion {
+	public final fun getRESERVED_CHARS ()Ljava/util/List;
+	public final fun getRESERVED_WORDS ()Ljava/util/List;
+}
+
+public final class com/egoriku/ktor/retrosheet/util/QueryConverter {
+	public fun <init> (Ljava/lang/String;Ljava/util/Map;)V
+	public final fun convert ()Ljava/lang/String;
+}
+
+public final class com/egoriku/ktor/retrosheet/util/SheetUtils {
+	public static final field INSTANCE Lcom/egoriku/ktor/retrosheet/util/SheetUtils;
+	public final fun getLetterAt (I)Ljava/lang/String;
+	public final fun toLetterMap (Ljava/util/List;)Ljava/util/Map;
+	public final fun toLetterMap ([Ljava/lang/String;)Ljava/util/Map;
+}
+

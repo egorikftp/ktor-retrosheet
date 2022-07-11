@@ -1,11 +1,16 @@
 plugins {
     kotlin("multiplatform")
     kotlin("plugin.serialization")
-    id("maven-publish")
+    id("me.tylerbwong.gradle.metalava") version "0.2.3"
 }
 
 repositories {
-    mavenLocal()
+    google()
+}
+
+metalava {
+    filename = "api/$name-api.txt"
+    reportLintsAsErrors = true
 }
 
 group = "com.egoriku.ktor.retrosheet"
@@ -18,7 +23,6 @@ kotlin {
         commonMain {
             dependencies {
                 api(projects.kotlinxSerializationCsv)
-               // api("kotlinx.serialization.csv:kotlinx-serialization-csv:1.0.0")
 
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
 

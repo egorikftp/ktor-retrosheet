@@ -1,0 +1,65 @@
+public abstract class kotlinx/serialization/csv/Csv : kotlinx/serialization/SerialFormat, kotlinx/serialization/StringFormat {
+	public static final field Default Lkotlinx/serialization/csv/Csv$Default;
+	public synthetic fun <init> (Lkotlinx/serialization/csv/config/CsvConfig;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun decodeFromString (Lkotlinx/serialization/DeserializationStrategy;Ljava/lang/String;)Ljava/lang/Object;
+	public fun encodeToString (Lkotlinx/serialization/SerializationStrategy;Ljava/lang/Object;)Ljava/lang/String;
+	public fun getSerializersModule ()Lkotlinx/serialization/modules/SerializersModule;
+}
+
+public final class kotlinx/serialization/csv/Csv$Default : kotlinx/serialization/csv/Csv {
+	public final fun getRfc4180 ()Lkotlinx/serialization/csv/Csv;
+}
+
+public final class kotlinx/serialization/csv/CsvKt {
+	public static final fun Csv (Lkotlinx/serialization/csv/Csv;Lkotlin/jvm/functions/Function1;)Lkotlinx/serialization/csv/Csv;
+	public static synthetic fun Csv$default (Lkotlinx/serialization/csv/Csv;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lkotlinx/serialization/csv/Csv;
+}
+
+public final class kotlinx/serialization/csv/config/CsvBuilder {
+	public fun <init> ()V
+	public final fun getDelimiter ()C
+	public final fun getEscapeChar ()Ljava/lang/Character;
+	public final fun getHasHeaderRecord ()Z
+	public final fun getHasTrailingDelimiter ()Z
+	public final fun getHeaderSeparator ()C
+	public final fun getIgnoreEmptyLines ()Z
+	public final fun getIgnoreUnknownColumns ()Z
+	public final fun getNullString ()Ljava/lang/String;
+	public final fun getQuoteChar ()C
+	public final fun getQuoteMode ()Lkotlinx/serialization/csv/config/QuoteMode;
+	public final fun getRecordSeparator ()Ljava/lang/String;
+	public final fun getSerializersModule ()Lkotlinx/serialization/modules/SerializersModule;
+	public final fun setDelimiter (C)V
+	public final fun setEscapeChar (Ljava/lang/Character;)V
+	public final fun setHasHeaderRecord (Z)V
+	public final fun setHasTrailingDelimiter (Z)V
+	public final fun setHeaderSeparator (C)V
+	public final fun setIgnoreEmptyLines (Z)V
+	public final fun setIgnoreUnknownColumns (Z)V
+	public final fun setNullString (Ljava/lang/String;)V
+	public final fun setQuoteChar (C)V
+	public final fun setQuoteMode (Lkotlinx/serialization/csv/config/QuoteMode;)V
+	public final fun setRecordSeparator (Ljava/lang/String;)V
+	public final fun setSerializersModule (Lkotlinx/serialization/modules/SerializersModule;)V
+}
+
+public final class kotlinx/serialization/csv/config/QuoteMode : java/lang/Enum {
+	public static final field ALL Lkotlinx/serialization/csv/config/QuoteMode;
+	public static final field ALL_NON_NULL Lkotlinx/serialization/csv/config/QuoteMode;
+	public static final field ALL_NON_NUMERIC Lkotlinx/serialization/csv/config/QuoteMode;
+	public static final field MINIMAL Lkotlinx/serialization/csv/config/QuoteMode;
+	public static final field NONE Lkotlinx/serialization/csv/config/QuoteMode;
+	public static fun valueOf (Ljava/lang/String;)Lkotlinx/serialization/csv/config/QuoteMode;
+	public static fun values ()[Lkotlinx/serialization/csv/config/QuoteMode;
+}
+
+public abstract interface class kotlinx/serialization/csv/decode/Source {
+	public abstract fun canRead ()Z
+	public abstract fun getOffset ()I
+	public abstract fun mark ()V
+	public abstract fun peek ()Ljava/lang/Character;
+	public abstract fun read ()Ljava/lang/Character;
+	public abstract fun reset ()V
+	public abstract fun unmark ()V
+}
+

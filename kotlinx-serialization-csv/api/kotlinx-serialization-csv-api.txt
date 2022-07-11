@@ -1,0 +1,94 @@
+// Signature format: 4.0
+package kotlinx.serialization.csv {
+
+  @kotlinx.serialization.ExperimentalSerializationApi public abstract sealed class Csv implements kotlinx.serialization.SerialFormat kotlinx.serialization.StringFormat {
+    method public <T> T! decodeFromString(kotlinx.serialization.DeserializationStrategy<T> deserializer, String string);
+    method public <T> String encodeToString(kotlinx.serialization.SerializationStrategy<? super T> serializer, T? value);
+    method public kotlinx.serialization.modules.SerializersModule getSerializersModule();
+    property public kotlinx.serialization.modules.SerializersModule serializersModule;
+    field public static final kotlinx.serialization.csv.Csv.Default Default;
+  }
+
+  public static final class Csv.Default extends kotlinx.serialization.csv.Csv {
+    method public kotlinx.serialization.csv.Csv getRfc4180();
+    property public final kotlinx.serialization.csv.Csv Rfc4180;
+  }
+
+  public final class CsvExceptionKt {
+  }
+
+  public final class CsvKt {
+    method @kotlinx.serialization.ExperimentalSerializationApi public static kotlinx.serialization.csv.Csv Csv(optional kotlinx.serialization.csv.Csv from, kotlin.jvm.functions.Function1<? super kotlinx.serialization.csv.config.CsvBuilder,kotlin.Unit> action);
+  }
+
+}
+
+package kotlinx.serialization.csv.config {
+
+  public final class CsvBuilder {
+    method public char getDelimiter();
+    method public Character? getEscapeChar();
+    method public boolean getHasHeaderRecord();
+    method public boolean getHasTrailingDelimiter();
+    method public char getHeaderSeparator();
+    method public boolean getIgnoreEmptyLines();
+    method public boolean getIgnoreUnknownColumns();
+    method public String getNullString();
+    method public char getQuoteChar();
+    method public kotlinx.serialization.csv.config.QuoteMode getQuoteMode();
+    method public String getRecordSeparator();
+    method public kotlinx.serialization.modules.SerializersModule getSerializersModule();
+    method public void setDelimiter(char delimiter);
+    method public void setEscapeChar(Character? escapeChar);
+    method public void setHasHeaderRecord(boolean hasHeaderRecord);
+    method public void setHasTrailingDelimiter(boolean hasTrailingDelimiter);
+    method public void setHeaderSeparator(char headerSeparator);
+    method public void setIgnoreEmptyLines(boolean ignoreEmptyLines);
+    method public void setIgnoreUnknownColumns(boolean ignoreUnknownColumns);
+    method public void setNullString(String nullString);
+    method public void setQuoteChar(char quoteChar);
+    method public void setQuoteMode(kotlinx.serialization.csv.config.QuoteMode quoteMode);
+    method public void setRecordSeparator(String recordSeparator);
+    method public void setSerializersModule(kotlinx.serialization.modules.SerializersModule serializersModule);
+    property public final char delimiter;
+    property public final Character? escapeChar;
+    property public final boolean hasHeaderRecord;
+    property public final boolean hasTrailingDelimiter;
+    property public final char headerSeparator;
+    property public final boolean ignoreEmptyLines;
+    property public final boolean ignoreUnknownColumns;
+    property public final String nullString;
+    property public final char quoteChar;
+    property public final kotlinx.serialization.csv.config.QuoteMode quoteMode;
+    property public final String recordSeparator;
+    property public final kotlinx.serialization.modules.SerializersModule serializersModule;
+  }
+
+  public enum QuoteMode {
+    enum_constant public static final kotlinx.serialization.csv.config.QuoteMode ALL;
+    enum_constant public static final kotlinx.serialization.csv.config.QuoteMode ALL_NON_NULL;
+    enum_constant public static final kotlinx.serialization.csv.config.QuoteMode ALL_NON_NUMERIC;
+    enum_constant public static final kotlinx.serialization.csv.config.QuoteMode MINIMAL;
+    enum_constant public static final kotlinx.serialization.csv.config.QuoteMode NONE;
+  }
+
+}
+
+package kotlinx.serialization.csv.decode {
+
+  public interface Source {
+    method public boolean canRead();
+    method public int getOffset();
+    method public void mark();
+    method public Character? peek();
+    method public Character? read();
+    method public void reset();
+    method public void unmark();
+    property public abstract int offset;
+  }
+
+  public final class StringSourceKt {
+  }
+
+}
+

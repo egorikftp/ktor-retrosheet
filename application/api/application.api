@@ -1,0 +1,81 @@
+public final class com/egoriku/ktor/retrosheet/example/ExampleKt {
+	public static final field CATEGORIES Ljava/lang/String;
+	public static final field FEATURES Ljava/lang/String;
+	public static final fun main ()V
+	public static synthetic fun main ([Ljava/lang/String;)V
+}
+
+public final class com/egoriku/ktor/retrosheet/example/model/Config {
+	public static final field Companion Lcom/egoriku/ktor/retrosheet/example/model/Config$Companion;
+	public synthetic fun <init> (IILjava/lang/String;ILjava/lang/String;Ljava/lang/String;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (ILjava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()I
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun copy (ILjava/lang/String;ILjava/lang/String;Ljava/lang/String;)Lcom/egoriku/ktor/retrosheet/example/model/Config;
+	public static synthetic fun copy$default (Lcom/egoriku/ktor/retrosheet/example/model/Config;ILjava/lang/String;ILjava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcom/egoriku/ktor/retrosheet/example/model/Config;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCategoryId ()I
+	public final fun getCategoryName ()Ljava/lang/String;
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getSubCategoryId ()I
+	public final fun getSubCategoryName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public static final fun write$Self (Lcom/egoriku/ktor/retrosheet/example/model/Config;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+}
+
+public final class com/egoriku/ktor/retrosheet/example/model/Config$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/egoriku/ktor/retrosheet/example/model/Config$$serializer;
+	public static final synthetic field descriptor Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/egoriku/ktor/retrosheet/example/model/Config;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/egoriku/ktor/retrosheet/example/model/Config;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/egoriku/ktor/retrosheet/example/model/Config$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/egoriku/ktor/retrosheet/example/model/Features {
+	public static final field Companion Lcom/egoriku/ktor/retrosheet/example/model/Features$Companion;
+	public synthetic fun <init> (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Z
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Lcom/egoriku/ktor/retrosheet/example/model/Features;
+	public static synthetic fun copy$default (Lcom/egoriku/ktor/retrosheet/example/model/Features;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Lcom/egoriku/ktor/retrosheet/example/model/Features;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFeatureName ()Ljava/lang/String;
+	public final fun getIconUrl ()Ljava/lang/String;
+	public final fun getSheetName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isAvailable ()Z
+	public fun toString ()Ljava/lang/String;
+	public static final fun write$Self (Lcom/egoriku/ktor/retrosheet/example/model/Features;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+}
+
+public final class com/egoriku/ktor/retrosheet/example/model/Features$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/egoriku/ktor/retrosheet/example/model/Features$$serializer;
+	public static final synthetic field descriptor Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/egoriku/ktor/retrosheet/example/model/Features;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/egoriku/ktor/retrosheet/example/model/Features;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/egoriku/ktor/retrosheet/example/model/Features$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+

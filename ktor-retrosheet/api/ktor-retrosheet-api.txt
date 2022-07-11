@@ -1,0 +1,118 @@
+// Signature format: 4.0
+package com.egoriku.ktor.retrosheet.extension {
+
+  public final class HttpRequestBuilderKt {
+    method public static void defaultSheetUrl(io.ktor.client.plugins.DefaultRequest.DefaultRequestBuilder, String docId);
+    method public static void query(io.ktor.client.request.HttpRequestBuilder, Object? value);
+    method public static void sheet(io.ktor.client.request.HttpRequestBuilder, Object? value);
+  }
+
+  public final class ParametersBuilderKt {
+  }
+
+  public final class UrlBuilderKt {
+  }
+
+}
+
+package com.egoriku.ktor.retrosheet.plugin {
+
+  public final class ConfigBuilder {
+    ctor public ConfigBuilder();
+    method public com.egoriku.ktor.retrosheet.plugin.Configuration build();
+    method @com.egoriku.ktor.retrosheet.plugin.ConfigDsl public void sheet(optional kotlin.jvm.functions.Function1<? super com.egoriku.ktor.retrosheet.plugin.SheetBuilder,kotlin.Unit> setup);
+  }
+
+  @kotlin.DslMarker public @interface ConfigDsl {
+  }
+
+  public final class ConfigDslKt {
+    method @com.egoriku.ktor.retrosheet.plugin.ConfigDsl public static com.egoriku.ktor.retrosheet.plugin.Configuration configuration(kotlin.jvm.functions.Function1<? super com.egoriku.ktor.retrosheet.plugin.ConfigBuilder,kotlin.Unit> setup);
+  }
+
+  public final class Configuration {
+    ctor public Configuration(java.util.Map<java.lang.String,? extends java.util.Map<java.lang.String,java.lang.String>> sheets);
+    method public java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.String>> component1();
+    method public com.egoriku.ktor.retrosheet.plugin.Configuration copy(java.util.Map<java.lang.String,? extends java.util.Map<java.lang.String,java.lang.String>> sheets);
+    method public boolean equals(Object? other);
+    method public java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.String>> getSheets();
+    method public int hashCode();
+    method public String toString();
+    property public final java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.String>> sheets;
+  }
+
+  public final class RetrosheetPlugin {
+    ctor public RetrosheetPlugin(java.util.Map<java.lang.String,? extends java.util.Map<java.lang.String,java.lang.String>> sheets);
+    field public static final com.egoriku.ktor.retrosheet.plugin.RetrosheetPlugin.Feature Feature;
+  }
+
+  public static final class RetrosheetPlugin.Config {
+    ctor public RetrosheetPlugin.Config();
+    method public com.egoriku.ktor.retrosheet.plugin.Configuration getConfiguration();
+    method public void setConfiguration(com.egoriku.ktor.retrosheet.plugin.Configuration configuration);
+    property public final com.egoriku.ktor.retrosheet.plugin.Configuration configuration;
+  }
+
+  public static final class RetrosheetPlugin.Feature implements io.ktor.client.plugins.HttpClientPlugin<com.egoriku.ktor.retrosheet.plugin.RetrosheetPlugin.Config,com.egoriku.ktor.retrosheet.plugin.RetrosheetPlugin> {
+    method public io.ktor.util.AttributeKey<com.egoriku.ktor.retrosheet.plugin.RetrosheetPlugin> getKey();
+    method public void install(com.egoriku.ktor.retrosheet.plugin.RetrosheetPlugin plugin, io.ktor.client.HttpClient scope);
+    method public com.egoriku.ktor.retrosheet.plugin.RetrosheetPlugin prepare(kotlin.jvm.functions.Function1<? super com.egoriku.ktor.retrosheet.plugin.RetrosheetPlugin.Config,kotlin.Unit> block);
+    property public io.ktor.util.AttributeKey<com.egoriku.ktor.retrosheet.plugin.RetrosheetPlugin> key;
+  }
+
+  public final class Sheet {
+    ctor public Sheet(String sheetName, java.util.Map<java.lang.String,java.lang.String> columns);
+    method public String component1();
+    method public java.util.Map<java.lang.String,java.lang.String> component2();
+    method public com.egoriku.ktor.retrosheet.plugin.Sheet copy(String sheetName, java.util.Map<java.lang.String,java.lang.String> columns);
+    method public boolean equals(Object? other);
+    method public java.util.Map<java.lang.String,java.lang.String> getColumns();
+    method public String getSheetName();
+    method public int hashCode();
+    method public String toString();
+    property public final java.util.Map<java.lang.String,java.lang.String> columns;
+    property public final String sheetName;
+  }
+
+  public final class SheetBuilder {
+    ctor public SheetBuilder();
+    method public com.egoriku.ktor.retrosheet.plugin.Sheet build();
+    method public java.util.List<java.lang.String> getColumns();
+    method public String getName();
+    method public void setColumns(java.util.List<java.lang.String> columns);
+    method public void setName(String name);
+    property public final java.util.List<java.lang.String> columns;
+    property public final String name;
+  }
+
+}
+
+package com.egoriku.ktor.retrosheet.util {
+
+  public final class ColumnNameVerifier {
+    ctor public ColumnNameVerifier(java.util.Set<java.lang.String> keys);
+    method @kotlin.jvm.Throws(exceptionClasses=IllegalArgumentException::class) public boolean verify();
+    field public static final com.egoriku.ktor.retrosheet.util.ColumnNameVerifier.Companion Companion;
+  }
+
+  public static final class ColumnNameVerifier.Companion {
+    method public java.util.List<java.lang.Character> getRESERVED_CHARS();
+    method public java.util.List<java.lang.String> getRESERVED_WORDS();
+    property public final java.util.List<java.lang.Character> RESERVED_CHARS;
+    property public final java.util.List<java.lang.String> RESERVED_WORDS;
+  }
+
+  public final class QueryConverter {
+    ctor public QueryConverter(String smartQuery, java.util.Map<java.lang.String,java.lang.String> smartQueryMap);
+    method public String convert();
+  }
+
+  public final class SheetUtils {
+    method public String getLetterAt(int _columnNumber);
+    method public java.util.Map<java.lang.String,java.lang.String> toLetterMap(java.lang.String... columns);
+    method public java.util.Map<java.lang.String,java.lang.String> toLetterMap(java.util.List<java.lang.String> columns);
+    field public static final com.egoriku.ktor.retrosheet.util.SheetUtils INSTANCE;
+  }
+
+}
+
