@@ -1,6 +1,7 @@
 package com.egoriku.ktor.retrosheet.example
 
 import com.egoriku.ktor.retrosheet.example.model.Config
+import com.egoriku.ktor.retrosheet.example.model.Count
 import com.egoriku.ktor.retrosheet.example.model.Features
 import com.egoriku.ktor.retrosheet.extension.defaultSheetUrl
 import com.egoriku.ktor.retrosheet.extension.query
@@ -66,6 +67,14 @@ fun main() {
             query("WHERE category_id = 1")
         }.body<List<Config>>().also {
             println(it.joinToString(separator = "\n"))
+            println("__________")
+        }
+
+        httpClient.get {
+            sheet(CATEGORIES)
+            query("SELECT COUNT(category_id)")
+        }.body<Count>().also {
+            println(it)
             println("__________")
         }
 
